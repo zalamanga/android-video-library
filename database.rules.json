@@ -1,0 +1,28 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "videos": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.admin === true",
+      "$video": {
+        ".validate": "newData.hasChildren(['title', 'description', 'videoUrl', 'storagePath'])",
+        "title": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 200"
+        },
+        "description": {
+          ".validate": "newData.isString() && newData.val().length <= 5000"
+        },
+        "videoUrl": {
+          ".validate": "newData.isString() && newData.val().matches(/^https:.*$/)"
+        },
+        "storagePath": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    }
+  }
+}

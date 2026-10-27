@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp">
+    <Button android:id="@+id/btnLogout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logout" />
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingBottom="12dp" android:accessibilityLiveRegion="polite" />
+    <Button android:id="@+id/btnChooseVideo" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Pilih Video" android:onClick="chooseVideo" />
+    <Button android:id="@+id/btnUploadVideo" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Upload Video" android:onClick="uploadVideo" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+</LinearLayout>

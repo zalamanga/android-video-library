@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Login pengelola video" android:textSize="24sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Gunakan akun Firebase dengan custom claim admin." android:layout_marginTop="12dp" />
+        <EditText android:id="@+id/et_email" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Email" android:inputType="textEmailAddress" />
+        <EditText android:id="@+id/et_password" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Password" android:inputType="textPassword" />
+        <Button android:id="@+id/bt_signin" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Login" />
+        <Button android:id="@+id/bt_signup" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:visibility="gone" android:text="Daftar" />
+    </LinearLayout>
+</ScrollView>
